@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>  
+    <title>Portfolio</title>
     <!-- 스타일 시트 링크 -->
     <link rel="stylesheet" href="source/styles.css">
     <!-- Xeicon 아이콘 폰트 링크 -->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
+
 <body>
-    <div class="wrap">
-        <div id="about" class="about-img">
-            <h2>Coding Cat Portfolio</h2>
-            <!-- 이미지 등 추가 내용 -->
-            <img src="source/images/index.webp">
-        </div>
+
+    <input type="checkbox" id="check">
+    <header>
+        <h1><i class="xi-pen xi-spin"></i>Coding Cat</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project.html">Project</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <label for="check">
+
+            <i class="xi-bars xi-2x"></i>
+            <i class="xi-close xi-2x"></i>
+        </label>
+    </header>
+    <div id="home" class="con">
+        <h2>Coding Cat Portfolio</h2>
+        <!-- 이미지 등 추가 내용 -->
+        <img src="source/images/index.webp">
+    </div>
+    <div id="profile" class="con">
+        <h2>Profile</h2>
+
+    </div>
+    <div id="contact" class="con">
+        <h2>contact</h2>
+
     </div>
 </body>
 </html>

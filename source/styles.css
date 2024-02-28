@@ -1,25 +1,80 @@
 /* styles.css */
 
 html {
-    background-color: #333131; /* 회색 배경색 지정 */    
+    background-color: #333131;    
+    scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400&display=swap');
+
+header  {
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 5px 30px;
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;   
+    width: 100%;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    color: bisque;
+}
 
 h2 {
     font-family: 'Roboto Slab', serif;
     font-optical-sizing: auto;
     font-weight: 500; /* 이 값은 필요에 따라 조정할 수 있습니다. */
     font-style: normal;
+    color: bisque;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box;}
 li { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
-.about-img img {
+.con {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con h2 {
+    position: absolute; /* 텍스트의 위치를 절대적으로 설정 */
+    top: 50%; /* 상단 여백을 50%로 설정 */
+    left: 50%; /* 좌측 여백을 50%로 설정 */
+    transform: translate(-50%, -50%); /* 텍스트를 가운데 정렬 */
+}
+
+img {
     width: 100%; 
     height: auto; 
     display: block; /* 이미지를 블록 요소로 설정하여 가로 중앙 정렬 */
-    margin: 0 auto; /* 가로 중앙 정렬 */
+    margin: 0 auto;
+}
+
+#profile {
+    background: url(images/img.jpg) center/cover;
+    background-attachment: fixed;
+}
+
+#contact {
+    background: url(images/k245246p1n1.jpg) center/cover;
+    background-attachment: fixed;
 }
