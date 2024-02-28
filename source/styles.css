@@ -1,7 +1,5 @@
 /* styles.css */
-/* styles.css */
 
-/* HTML 전체에 배경 이미지 설정 */
 html {
     background-color: #333131; /* 회색 배경색 지정 */    
 }
@@ -19,10 +17,9 @@ h2 {
 li { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
-img {    
-    max-width: 100%; 
+.about-img img {
+    width: 100%; 
     height: auto; 
     display: block; /* 이미지를 블록 요소로 설정하여 가로 중앙 정렬 */
     margin: 0 auto; /* 가로 중앙 정렬 */
 }
-
