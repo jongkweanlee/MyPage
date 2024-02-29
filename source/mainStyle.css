@@ -117,7 +117,7 @@ label {
 
 /* responsive web */
 
-@media (max-width: 960px) {
+@media (max-width: 500px) {
     header .navigation {
         display: none;
     }
