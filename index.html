@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
     <link rel="stylesheet" href="source/mainStyle.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <section>
         <input type="checkbox" id="check">
         <header>
-            <h2> <a href="#" class="logo"><span class="material-symbols-outlined">
-                edit
-                </span> Coding Cat</a></h2>
+            <h2 class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="title-icon">
+                    <path class="icon-color" d="M186.666-186.666h48.333l445.002-444.335-48.333-48.333-445.002 444.335v48.333ZM120-120v-141.999l559.334-558.334q9.334-9 21.5-14 12.167-5 25.5-5 12.667 0 25 5t22 14.333L821-772q10 9.666 14.5 22 4.5 12.333 4.5 24.666 0 12.667-4.833 25.167-4.834 12.499-14.167 21.833L261.999-120H120Zm652.667-606.001-46-45.999 46 45.999Zm-116.999 71-24-24.333 48.333 48.333-24.333-24Z"/>
+                </svg>
+               Coding Cat
+            </h2>
             <div class="navigation">
                 <a href="index.html">Home</a>
                 <a href="#">Project</a>
@@ -21,8 +23,12 @@
                 <a href="#">Contact</a>
             </div>
             <label for="check">
-                <i class="xi-bars"></i>
-                <i class="xi-close"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="menu">
+                    <path class="click-menu" d="M120-240v-66.666h720V-240H120Zm0-206.667v-66.666h720v66.666H120Zm0-206.667V-720h720v66.666H120Z"/>
+                </svg>       
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="close">
+                    <path class="click-close" d="m251.333-204.667-46.666-46.666L433.334-480 204.667-708.667l46.666-46.666L480-526.666l228.667-228.667 46.666 46.666L526.666-480l228.667 228.667-46.666 46.666L480-433.334 251.333-204.667Z"/>
+                </svg>
             </label>
         </header>
         <div class="content">
@@ -33,8 +39,16 @@
             </div>
         </div>
         <div class="media-icons">
-            <a href="https://github.com/jongkweanlee"><i class="xi-github xi-2x"></i></a>
-            <a href="mailto:jongkweanlee@gmail.com"><i class="xi-gmail xi-2x"></i></a>
+            <div class="circle">
+                <a href="https://github.com/jongkweanlee">
+                    <img src="source/images/github.png" alt="github" class="icon">
+                </a>
+            </div>
+            <div class="circle">
+                <a href="mailto:jongkweanlee@gmail.com">
+                    <img src="source/images/mail.png" alt="mail" class="icon">
+                </a>
+            </div>
         </div>
     </section>
     

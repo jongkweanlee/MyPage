@@ -32,6 +32,16 @@ header {
     align-items: center;
 }
 
+header h2 .title-icon{
+    height: 50px; /* 원하는 높이로 변경 */
+    width: 60px; /* 원하는 너비로 변경 */
+    transform: translate(0px, 6.6px);
+}
+
+header h2 .icon-color {
+    fill: #fff;
+}
+
 header .logo {
     position: relative;
     color :rgb(245, 245, 245);
@@ -59,7 +69,7 @@ header .navigation a:not(:last-child){
 }
 
 header .navigation a:hover {
-    background: #f3efb24f;  
+    background: #f1eeacc2;  
 }
 
 .content {
@@ -87,61 +97,96 @@ header .navigation a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-}
-
-.media-icons a {
-    position: relative;
-    color: #fffcfb;
-    font-size: 20px;
-    
-}
-
-.media-icons a:not(:last-child) {
-    margin-right: 60px;
+    margin: auto;  
 }
 
 .media-icons a :hover {
     transform: scale(1.5);
 }
 
+.media-icons .circle {
+    width: 50px; /* 동그란 원의 너비 */
+    height: 50px; /* 동그란 원의 높이 */
+    border-radius: 50%; /* 동그란 모양으로 만듦 */
+    background-color: #ccc; /* 배경색 (원의 색상) */
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.media-icons .circle:not(:last-child) {
+    margin-right: 40px;
+}
+
+.media-icons a .icon {
+    width: 35px; 
+    margin-top: 3.5px;
+}
+
+label .menu {
+    height: 40px;     
+}
+
+label .close {
+    height: 40px;     
+}
+
+label .click-menu {
+    fill: white;
+}
+
+label .click-close {
+    fill: white;
+}
+
 label {
-    color: #fff;
     display: none;
 }
 
 #check {
-    z-index: 3;
     display: none;
+    z-index: 1;
 }
 
 /* responsive web */
 
-@media (max-width: 950px) {
-    header .navigation {
+@media (max-width: 960px) {
+    header .navigation{
         display: none;
     }
 
     label {
         display: block;
-        font-size: 25px;
         cursor: pointer;
-        transition: 0.3s;
-        transition-property: color;
+        position: relative; /* Add this line */
     }
 
-    label:hover {
-        color: #f3efb24f;
+    label:hover .menu path{
+        fill: #7FFFD4;
+    }
+
+    label:hover .close path {
+        fill: #7FFFD4;
     }
     
-    label .xi-close {
+    label .click-close {
         display: none;
     }
+   
+    #check:checked ~ header .navigation a {
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
 
+    #check:checked ~ header label .click-menu {
+        display: none;
+    }
+   
     #check:checked ~ header .navigation {
-        z-index: 2;
-        position: fixed;
-        background: rgba(232, 219, 192, 0.4);
+        z-index: 0;
+        background: rgba(232, 219, 192, 0.658);
         top: 0;
         bottom: 0;
         left: 0;
@@ -150,34 +195,27 @@ label {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: fixed;
     }
 
-    #check:checked ~ header .navigation a {
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-    }
-
-    #check:checked ~ header label .xi-bars {
-        display: none;
-    }
-
-    #check:checked ~ header label .xi-close {
-        z-index: 2;
+    #check:checked ~ header label .click-close{
+        z-index: 1; /* Increase z-index value */
         display: block;
         position: fixed;
     }
 
-    label .xi-bars {
-        position: absolute;
+    label .menu {
+        position: absolute;        
     }
-
-    header .logo {
-        position: absolute;
-        bottom: -6px;
-    }
+        
 }
+
+
+
+
+
+
+
 
 @media (max-width: 560px) {
     .content .info h2 {
